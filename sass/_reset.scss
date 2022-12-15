@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--main-text);
+    color: var(--main-color);
+    background: url(../img/bg.png) no-repeat 0% 10%;
+    background-size: 100%;
+}
+img {
+    max-width: 100%;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+input {
+    max-width: 100%;
+}
+
+@media (max-width: 468px) {
+    body {
+        background: url(../img/bg.png) no-repeat 0% 6%;
+        background-size: 800px;
+    }
+}

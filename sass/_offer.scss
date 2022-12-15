@@ -1,0 +1,90 @@
+.offer__wrapper {
+    background: linear-gradient(100.49deg, #D8FFB9 -7.18%, rgba(170, 255, 103, 0.9) 91.75%);
+    padding: 50px;
+    border-radius: 30px;
+    h1 {
+        font-family: var(--header-text);
+        font-size: 48px;
+        max-width: 70%;
+        font-weight: normal;
+    }
+    h2 {
+        font-family: var(--bold-text);
+        margin-top: 30px;
+        font-size: 36px;
+        max-width: 70%;
+        font-weight: normal;
+    }
+    .timer {
+        font-family: var(--header-text);
+        font-size: 68px;
+        margin-top: 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 360px;
+        padding: 30px 30px 50px 30px;
+        border-radius: 30px;
+        background: #ffffff;
+    }
+    .timer::before {
+        content: attr(data-text);
+        font-family: var(--bold-text);
+        font-size: 18px;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 20px;
+        @include centered;
+    }
+    .timer-min,
+    .timer-sec {
+        min-width: 130px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1100px) {
+    .offer__wrapper {
+        h1 {
+            font-size: 40px;
+            max-width: 100%;
+        }
+        h2 {
+            font-size: 32px;
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 468px) {
+    .offer__wrapper {
+        padding: 30px;
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            .today {
+                white-space: nowrap;
+            }
+        }
+        h2 {
+            font-size: 18px;
+        }
+        .timer {
+            font-size: 40px;
+            margin-top: 30px;
+            position: relative;
+            max-width: 100%;
+            padding: 30px 30px 50px 30px;
+        }
+        .timer-min,
+        .timer-sec {
+            min-width: 80px;
+        }
+        .timer::before {
+            font-size: 14px;
+            text-align: center;
+            width: 100%;
+        }
+    }
+}

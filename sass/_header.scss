@@ -1,0 +1,115 @@
+.header {
+    .header__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0px;
+    }
+    .header__logo {
+        font-family: var(--header-text);
+        color: var(--main-color);
+        font-size: 32px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        .circle {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(100.49deg, #D8FFB9 -7.18%, rgba(170, 255, 103, 0.9) 91.75%);
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    }
+    .header__city {
+        position: relative;
+        &-content {
+            font-size: 18px;
+            padding: 7px 15px 7px 40px;
+            background: linear-gradient(100.49deg, #D8FFB9 -7.18%, rgba(170, 255, 103, 0.9) 91.75%);
+            border-radius: 20px;
+            cursor: pointer;
+            position: relative;
+            &:before {
+                content: '';
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                left: 15px;
+                background: url(../img/map.svg) no-repeat center;
+                background-size: cover;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        &-checked {
+            width: 300px;
+            height: 100px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 20px;
+            position: absolute;
+            right: 0;
+            bottom: -120px;
+            border: 1px solid rgba(170, 255, 103, 0.9);
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: 0.3s ease-in-out;
+            span {
+                display: block;
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            input {
+                width: 180px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                padding: 0px 10px;
+                border-radius: 5px;
+                border: 1px solid var(--grey-color);
+            }
+            button {
+                width: 80px;
+                height: 40px;
+                font-size: 14px;
+            }
+            .checked {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                right: 30px;
+                top: -20px;
+                border: 10px solid transparent;
+                border-bottom: 10px solid rgba(170, 255, 103, 0.9);
+            }
+        }
+    }
+}
+
+.checked-active {
+    transform: scaleY(1) !important;
+}
+
+@media (max-width: 468px) {
+    .header {
+        .header__logo {
+            font-size: 24px;
+            .circle {
+                width: 30px;
+                height: 30px;
+                background: linear-gradient(100.49deg, #D8FFB9 -7.18%, rgba(170, 255, 103, 0.9) 91.75%);
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+        }
+        .header__city {
+            &-content {
+                font-size: 1em;
+            }
+        }
+    }
+}
